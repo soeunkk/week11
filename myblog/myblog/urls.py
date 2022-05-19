@@ -19,7 +19,7 @@ from blogapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('community/', views.community),
+    path('', views.home, name='home'),
+    path('community/', views.community, name='community'),
     path('developer/', include('developer.urls')),
 ]
