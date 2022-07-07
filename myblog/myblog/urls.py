@@ -23,4 +23,5 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('detail/<int:blog_id>', views.detail, name="detail"),
     path('developer/', include('developer.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
