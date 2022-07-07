@@ -9,5 +9,7 @@
     <h3> 제목: {{ blog.title }}</h3>
     <p> 날짜: {{ blog.pub_date }} </p>
     <p> 자세한 본문: {{ blog.body }}</p>
-
+    <a href="{% url 'blogupdate' blog.id %}">수정하기</a>
+    <a href="{% url 'blogdelete' blog.id %}">삭제하기</a>
+    <br>
 {% endblock %}

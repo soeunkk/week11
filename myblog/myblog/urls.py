@@ -22,6 +22,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('blog/', views.blog, name='blog'),
     path('detail/<int:blog_id>', views.detail, name="detail"),
+    path('new/', views.new, name="new"),
+    path('modelformcreate/', views.modelformcreate, name="modelformcreate"),
+    path('edit/', views.edit, name="edit"),
+    path('blogupdate/<int:blog_id>', views.blogupdate, name="blogupdate"),
+    path('blogdelete/<int:blog_id>', views.blogdelete, name='blogdelete'),
     path('developer/', include('developer.urls')),
     path('accounts/', include('accounts.urls')),
 ]

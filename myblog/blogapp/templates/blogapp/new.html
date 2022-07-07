@@ -1,0 +1,12 @@
+{% extends 'blogapp/base.html' %}
+
+{% block content %}
+
+    <form action="{% url 'modelformcreate' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="새 글 작성">
+    </form>
+
+{% endblock %}
