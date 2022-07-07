@@ -27,6 +27,5 @@ urlpatterns = [
     path('edit/', views.edit, name="edit"),
     path('blogupdate/<int:blog_id>', views.blogupdate, name="blogupdate"),
     path('blogdelete/<int:blog_id>', views.blogdelete, name='blogdelete'),
-    path('developer/', include('developer.urls')),
     path('accounts/', include('accounts.urls')),
 ]
