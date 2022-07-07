@@ -1,0 +1,20 @@
+{% extends 'blogapp/base.html' %}
+
+{% block content %}
+
+    <h1>Sign up!</h1> <br>
+
+    {% if error %}
+        {{ error }}
+        <br><br>
+    {% endif %}
+
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        아이디: <input type="text" name="userId" /> <br><br>
+        비밀번호: <input type="password" name="password1"/> <br><br>
+        비밀번호 확인: <input type="password" name="password2"/> <br><br>
+        <input type="submit" value="회원가입"/>
+    </form>
+
+{% endblock %}
