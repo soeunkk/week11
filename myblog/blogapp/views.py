@@ -5,9 +5,6 @@ from .models import Blog
 def home(request):
     return render(request, 'blogapp/home.html')
 
-def community(request):
-    return render(request, 'blogapp/community.html')
-
 def blog(request):
     blogs = Blog.objects
     return render(request, 'blogapp/blog.html', {'blogs' : blogs})
